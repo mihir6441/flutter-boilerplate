@@ -1,19 +1,14 @@
-import 'package:flutter_boilerplate/app_screens/app_screens.dart';
-import 'package:flutter_boilerplate/bloc/login/login_bloc.dart';
-import 'package:flutter_boilerplate/bloc/login/login_event.dart';
-import 'package:flutter_boilerplate/bloc/login/login_state.dart';
-import 'package:flutter_boilerplate/constants/app_colors.dart';
-import 'package:flutter_boilerplate/in_app_purchase.dart';
-import 'package:flutter_boilerplate/utils/app_utils.dart';
-import 'package:flutter_boilerplate/widgets/app_button.dart';
-import 'package:flutter_boilerplate/widgets/app_loading_overlay.dart';
-import 'package:flutter_boilerplate/widgets/app_text_field.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get_it/get_it.dart';
+import 'package:flutter_boilerplate/app_screens/app_screens.dart';
+import 'package:flutter_boilerplate/constants/app_colors.dart';
+import 'package:flutter_boilerplate/utils/app_utils.dart';
+import 'package:flutter_boilerplate/widgets/app_loading_overlay.dart';
 import 'package:sizer/sizer.dart';
+
+import 'bloc/login_bloc.dart';
+import 'bloc/login_event.dart';
+import 'bloc/login_state.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -47,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
         listener: (context, state) {
           if (state.isCompleted) {
             if (state.isEmailVerified) {
-            //  _navigateToHome(context);
+              //  _navigateToHome(context);
             } else {
               //_navigateToVerifyEmail(context);
             }
@@ -59,7 +54,24 @@ class _LoginScreenState extends State<LoginScreen> {
             return AppLoadingOverlay(
               isLoading: state.isLoading,
               child: SafeArea(
-                child: InAppPurchaseScreen(),
+                /// for In app purchase demo
+                // child: InAppPurchaseScreen(),
+                /// for news listing API demo
+                child: Center(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, AppScreens.newsList);
+                    },
+                    child: Text(
+                      "Fetch News",
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
               ),
             );
           },
@@ -69,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void _performLogin() {
-   // InAppPurchaseDemoState.initStoreInfo();
+    // InAppPurchaseDemoState.initStoreInfo();
     final email = _emailController.text.toString();
     final password = _passwordController.text.toString();
     BlocProvider.of<LoginBloc>(context).add(
