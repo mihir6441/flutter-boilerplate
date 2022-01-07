@@ -3,6 +3,8 @@ import 'package:flutter_boilerplate/preferences/preferences_manager.dart';
 import 'package:flutter_boilerplate/repository/login_repository.dart';
 import 'package:flutter_boilerplate/repository/login_repository_impl.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_boilerplate/repository/news_repository.dart';
+import 'package:flutter_boilerplate/repository/news_repository_impl.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
 
@@ -20,4 +22,7 @@ void setupDependencies() {
 
   // Login
   _getIt.registerSingleton<LoginRepository>(LoginRepositoryImpl());
+
+  // News
+  _getIt.registerSingleton<NewsRepository>(NewsRepositoryImpl());
 }
