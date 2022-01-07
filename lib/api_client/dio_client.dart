@@ -7,7 +7,7 @@ class DioClient {
   late final Dio _dio;
 
   DioClient() {
-    const _baseUrl = 'yourBaseURL'; /// paste your API's baseUrl here...
+    const _baseUrl = 'https://newsapi.org/v2'; /// paste your API's baseUrl here...
     final BaseOptions _options = BaseOptions(
         sendTimeout: 30000,
         connectTimeout: 30000,
