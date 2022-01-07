@@ -1,7 +1,6 @@
-# base_project
+# flutter-boilerplate
 
-A new Flutter project.
-
+A Flutter base project structure using [get_it](https://pub.dev/packages/get_it) and [flutter_bloc](https://pub.dev/packages/flutter_bloc) packages.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
