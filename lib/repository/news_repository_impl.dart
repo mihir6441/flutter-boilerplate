@@ -15,7 +15,6 @@ class NewsRepositoryImpl extends NewsRepository {
       final response = await _dio.get(
         '/everything?q=india&from=2021-12-07&sortBy=publishedAt&apiKey=63f2b019f13e4a85b0281c2758ba9f17',
       );
-      print("hello$response");
       final newsResponse = NewsResponse.fromJson(response.data);
       return ApiResponse.success(data: newsResponse);
     } on DioError catch (error) {
