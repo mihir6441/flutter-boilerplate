@@ -1,23 +1,13 @@
-
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_boilerplate/ui/splash/splash_screen.dart';
 import 'package:flutter_boilerplate/utils/app_dependencies.dart';
 import 'package:flutter_boilerplate/utils/app_router.dart';
 import 'package:flutter_boilerplate/utils/app_theme.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_boilerplate/utils/app_dependencies.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:sizer/sizer.dart';
 
 import 'localization/app_localization_manager.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  setupDependencies();
-
-  runApp(const MyApp());
-}
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -32,6 +22,9 @@ class _MyHomePageState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsFlutterBinding.ensureInitialized();
+    setupDependencies();
+
     return Sizer(
       builder: (context, orientation, deviceType) {
         // Set system UI to Dark with Light icons
@@ -53,7 +46,7 @@ class _MyHomePageState extends State<MyApp> {
                   GlobalCupertinoLocalizations.delegate,
                 ],
                 locale: locale,
-                supportedLocales:  const [
+                supportedLocales: const [
                   Locale('en', ''), // English
                 ],
                 home: const SplashScreen(),
@@ -64,6 +57,4 @@ class _MyHomePageState extends State<MyApp> {
       },
     );
   }
-
-
 }
