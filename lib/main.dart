@@ -23,7 +23,7 @@ class _MyHomePageState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     WidgetsFlutterBinding.ensureInitialized();
-    setupDependencies();
+
 
     return Sizer(
       builder: (context, orientation, deviceType) {
