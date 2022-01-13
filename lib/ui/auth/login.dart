@@ -58,18 +58,37 @@ class _LoginScreenState extends State<LoginScreen> {
                 // child: InAppPurchaseScreen(),
                 /// for news listing API demo
                 child: Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, AppScreens.newsList);
-                    },
-                    child: Text(
-                      "Fetch News",
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.normal,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppScreens.newsList);
+                        },
+                        child: Text(
+                          "Fetch News",
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
                       ),
-                    ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, AppScreens.postList);
+                        },
+                        child: Text(
+                          "Fetch Posts",
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
