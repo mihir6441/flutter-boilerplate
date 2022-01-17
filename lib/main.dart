@@ -7,6 +7,7 @@ import 'package:flutter_boilerplate/utils/app_theme.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:sizer/sizer.dart';
 
+import 'generated/l10n.dart';
 import 'localization/app_localization_manager.dart';
 
 class MyApp extends StatefulWidget {
@@ -41,14 +42,13 @@ class _MyHomePageState extends State<MyApp> {
                 debugShowCheckedModeBanner: false,
                 theme: ThemeUtils.buildAppTheme(context),
                 localizationsDelegates: const [
+                  S.delegate,
                   GlobalMaterialLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                 ],
                 locale: locale,
-                supportedLocales: const [
-                  Locale('en', ''), // English
-                ],
+                supportedLocales: S.delegate.supportedLocales,
                 home: const SplashScreen(),
                 onGenerateRoute: _router.getRoute,
                 navigatorObservers: [_router.routeObserver],

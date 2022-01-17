@@ -25,3 +25,7 @@ A Flutter base project structure using [get_it](https://pub.dev/packages/get_it)
 - Set up API call in UI file and set data from API response.
 - ## Most important step do not forget to register your repository instance by `_getIt.registerSingleton<RepositoryName>(RepositoryNameImpl());`
 - In main.dart’s main function call the class where we set up dependency for get it , where we register an instance of get it package and register instances of other base classes.
+
+
+## For auto generating json serializable file run following command
+`flutter pub run build_runner build --delete-conflicting-outputs`

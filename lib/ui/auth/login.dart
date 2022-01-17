@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate/app_screens/app_screens.dart';
 import 'package:flutter_boilerplate/constants/app_colors.dart';
+import 'package:flutter_boilerplate/generated/l10n.dart';
 import 'package:flutter_boilerplate/utils/app_utils.dart';
 import 'package:flutter_boilerplate/widgets/app_loading_overlay.dart';
 import 'package:sizer/sizer.dart';
@@ -67,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.pushNamed(context, AppScreens.newsList);
                         },
                         child: Text(
-                          "Fetch News",
+                          S.of(context).fetchNews,
                           style: TextStyle(
                             color: AppColors.white,
                             fontSize: 16.sp,
@@ -80,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.pushNamed(context, AppScreens.postList);
                         },
                         child: Text(
-                          "Fetch Posts",
+                          S.of(context).fetchPosts,
                           style: TextStyle(
                             color: AppColors.white,
                             fontSize: 16.sp,
