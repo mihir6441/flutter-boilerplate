@@ -1,5 +1,6 @@
 {
   "@@locale": "en",
   "fetchNews": "Fetch News",
-  "fetchPosts": "Fetch Posts"
+  "fetchPosts": "Fetch Posts",
+  "noDataFound": "No Data Found!"
 }
