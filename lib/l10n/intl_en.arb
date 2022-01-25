@@ -2,5 +2,8 @@
   "@@locale": "en",
   "fetchNews": "Fetch News",
   "fetchPosts": "Fetch Posts",
-  "noDataFound": "No Data Found!"
+  "noDataFound": "No Data Found!",
+  "notificationExample": "Notification Example",
+  "sendNotificationWithImage": "Post Notification with image",
+  "sendNotificationWithoutImage": "Post Notification without image"
 }

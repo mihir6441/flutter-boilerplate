@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_boilerplate/app_screens/app_screens.dart';
 import 'package:flutter_boilerplate/ui/auth/login.dart';
 import 'package:flutter_boilerplate/ui/news/news_list.dart';
+import 'package:flutter_boilerplate/ui/notification/one_signal_notification.dart';
 import 'package:flutter_boilerplate/ui/posts/posts_page.dart';
 
 class AppRouter {
@@ -28,6 +29,12 @@ class AppRouter {
         return _buildRoute(
           settings,
           PostPageScreen.create(),
+        );
+
+      case AppScreens.notificationExample:
+        return _buildRoute(
+          settings,
+          OneSignalExample(),
         );
 
       default:
