@@ -35,12 +35,12 @@ class AppRouter {
       case AppScreens.clipList:
         return _buildRoute(
           settings,
-          ClipsListScreen.create(),
+          ClipsListScreen.create(),);
 
       case AppScreens.notificationExample:
         return _buildRoute(
           settings,
-          OneSignalExample(),
+          const OneSignalExample(),
         );
 
       default:

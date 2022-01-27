@@ -92,18 +92,30 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextButton(
                         onPressed: () {
                           Navigator.pushNamed(context, AppScreens.clipList);
-                          // Navigator.pushNamed(context, AppScreens.notificationExample);
                         },
                         child: Text(
                           S.of(context).fetchClips,
-                          //S.of(context).notificationExample,
                           style: TextStyle(
                             color: AppColors.white,
                             fontSize: 16.sp,
                             fontWeight: FontWeight.normal,
                           ),
                         ),
-                      )
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                              context, AppScreens.notificationExample);
+                        },
+                        child: Text(
+                          S.of(context).notificationExample,
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
