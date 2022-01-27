@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate/constants/app_colors.dart';
+
 import 'package:flutter_boilerplate/generated/l10n.dart';
 import 'package:flutter_boilerplate/ui/posts/bloc/post_bloc.dart';
 import 'package:flutter_boilerplate/utils/app_styles.dart';

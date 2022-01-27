@@ -1,9 +1,9 @@
 import 'package:flutter_boilerplate/api_client/http_client.dart';
 import 'package:flutter_boilerplate/constants/app_constants.dart';
+
 import 'package:flutter_boilerplate/model/post_api_models/post_model.dart';
 import 'package:flutter_boilerplate/repository/post_repository.dart';
 import 'package:get_it/get_it.dart';
-
 
 class PostRepositoryImpl extends PostRepository {
   final _httpClient = GetIt.I<HttpClients>();

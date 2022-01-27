@@ -5,6 +5,7 @@ import 'package:flutter_boilerplate/ui/auth/login.dart';
 import 'package:flutter_boilerplate/ui/clips/clips_list_page.dart';
 import 'package:flutter_boilerplate/ui/news/news_list.dart';
 import 'package:flutter_boilerplate/ui/notification/one_signal_notification.dart';
+
 import 'package:flutter_boilerplate/ui/posts/posts_page.dart';
 
 class AppRouter {
@@ -31,7 +32,7 @@ class AppRouter {
           settings,
           PostPageScreen.create(),
         );
-
+        
       case AppScreens.clipList:
         return _buildRoute(
           settings,
@@ -42,7 +43,6 @@ class AppRouter {
           settings,
           const OneSignalExample(),
         );
-
       default:
         return _buildRoute(settings, Container());
     }
