@@ -3,6 +3,7 @@
   "fetchNews": "Fetch News",
   "fetchPosts": "Fetch Posts",
   "noDataFound": "No Data Found!",
+  "fetchClips": "Fetch Clips"
   "notificationExample": "Notification Example",
   "sendNotificationWithImage": "Post Notification with image",
   "sendNotificationWithoutImage": "Post Notification without image"
