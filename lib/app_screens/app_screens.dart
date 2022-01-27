@@ -7,4 +7,6 @@ class AppScreens {
   static const String login = '/login';
   static const String newsList = '/newsList';
   static const String postList = '/postList';
+  static const String clipList = '/clipList';
+  static const String notificationExample = '/notificationExample';
 }

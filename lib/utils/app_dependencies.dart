@@ -1,6 +1,9 @@
+import 'package:flutter_boilerplate/api_client/app_graphql_client.dart';
 import 'package:flutter_boilerplate/api_client/dio_client.dart';
 import 'package:flutter_boilerplate/api_client/http_client.dart';
 import 'package:flutter_boilerplate/preferences/preferences_manager.dart';
+import 'package:flutter_boilerplate/repository/clips_repository.dart';
+import 'package:flutter_boilerplate/repository/clips_repository_impl.dart';
 import 'package:flutter_boilerplate/repository/login_repository.dart';
 import 'package:flutter_boilerplate/repository/login_repository_impl.dart';
 import 'package:dio/dio.dart';
@@ -26,6 +29,9 @@ void setupDependencies() {
   // HTTP Client
   _getIt.registerSingleton<HttpClients>(HttpClients());
 
+  // GraphQL Client
+  _getIt.registerSingleton<AppGraphQlClient>(AppGraphQlClient());
+
   // Login
   _getIt.registerSingleton<LoginRepository>(LoginRepositoryImpl());
 
@@ -34,4 +40,7 @@ void setupDependencies() {
 
   // Posts
   _getIt.registerSingleton<PostRepository>(PostRepositoryImpl());
+
+  // Clips
+  _getIt.registerSingleton<ClipsRepository>(ClipsRepositoryImpl());
 }

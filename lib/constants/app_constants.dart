@@ -14,6 +14,8 @@ class AppConstants {
   static const String defaultCountryCode = '+966';
 
   static const String defaultLanguage = 'en';
+  static const int postLimit = 10;
+  static const int itemsPerPage = 10;
 
 
 }
