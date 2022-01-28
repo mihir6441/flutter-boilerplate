@@ -4,7 +4,11 @@
   "fetchPosts": "Fetch Posts",
   "noDataFound": "No Data Found!",
   "fetchClips": "Fetch Clips",
-  "notificationExample": "Notification Example",
+  "notificationExample": "Send Notification",
   "sendNotificationWithImage": "Post Notification with image",
-  "sendNotificationWithoutImage": "Post Notification without image"
+  "sendNotificationWithoutImage": "Post Notification without image",
+  "apiCallWIthDio": "API call with dio client",
+  "apiCallWIthHttp": "API call with http client",
+  "apiCallWIthGraphQL": "API call with graphQl client",
+  "oneSignalPushNotification": "Send notification with OneSignal SDK"
 }

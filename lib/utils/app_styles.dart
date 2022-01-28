@@ -1,4 +1,3 @@
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter_boilerplate/constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -27,6 +26,7 @@ class AppStyles {
   static const grey200Color = Color(0xffE2E8F0);
   static const grey100Color = Color(0xffF1F5F9);
   static const likeColor = Color(0xffEF4444);
+  static const greenColor = Color(0xFF1B5E20);
 
   static const danger500Color = Color(0xffEF4444);
   static const waring500Color = Color(0xffEAB308);
@@ -34,6 +34,8 @@ class AppStyles {
   static const unselectedBorderColor = Color(0xffC4C4C4);
 
   static const facebookColor = Color(0xff1877f2);
+  static const white = Color(0xffffffff);
+  static const black = Color(0xff000000);
   static const snapchatColor = Color(0xfffffc00);
   static const youtubeColor = Color(0xffff0000);
   static const instagramColor = Color(0xffe1306c);
@@ -54,25 +56,25 @@ class AppStyles {
   static Color whiteOpacityColor = const Color(0xffffffff).withOpacity(0.2);
 
   static TextStyle thinLargeTextStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 15.sp,
     fontWeight: FontWeight.w300,
   );
 
   static TextStyle thinMediumTextStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 13.sp,
     fontWeight: FontWeight.w300,
   );
 
   static TextStyle thickLargeTextStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 15.sp,
     fontWeight: FontWeight.w700,
   );
 
   static TextStyle normalTextStyle = TextStyle(
-    color: AppColors.color10,
+    color: AppStyles.black,
     fontSize: 6.sp,
     fontWeight: FontWeight.w300,
   );
@@ -130,24 +132,24 @@ class AppStyles {
   }
 
   static final TextStyle _arabicScriptPageTitleTabletStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 45.sp,
   );
 
   static final TextStyle _arabicScriptPageSubTitleTabletStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 32.sp,
     fontWeight: FontWeight.w300,
     height: 1.51,
   );
 
   static const TextStyle _arabicScriptPageTitlePhoneStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 32,
   );
 
   static const TextStyle _arabicScriptPageSubTitlePhoneStyle = TextStyle(
-    color: AppColors.black,
+    color: AppStyles.black,
     fontSize: 15,
     fontWeight: FontWeight.w300,
     height: 1.51,
@@ -166,7 +168,7 @@ class AppStyles {
   }
 
   static final TextStyle _arabicScriptPopupTitleTextTabletStyle = TextStyle(
-    color: AppColors.white,
+    color: AppStyles.white,
     fontWeight: FontWeight.bold,
     fontSize: 30.sp,
     letterSpacing: 5.sp,
@@ -174,20 +176,20 @@ class AppStyles {
 
   static final TextStyle _arabicScriptPopupDescriptionTextTabletStyle =
       TextStyle(
-        color: AppColors.white,
+        color: AppStyles.white,
     fontWeight: FontWeight.w300,
     fontSize: 24.sp,
   );
 
   static const TextStyle _arabicScriptPopupTitleTextPhoneStyle = TextStyle(
-    color: AppColors.white,
+    color: AppStyles.white,
     fontWeight: FontWeight.bold,
     fontSize: 14,
   );
 
   static const TextStyle _arabicScriptPopupDescriptionTextPhoneStyle =
       TextStyle(
-    color: AppColors.white,
+    color: AppStyles.white,
     fontWeight: FontWeight.w300,
     fontSize: 14,
   );

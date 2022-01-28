@@ -1,7 +1,6 @@
 import 'dart:io';
-
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 import 'package:platform_device_id/platform_device_id.dart';
 
 import 'app_language.dart';
@@ -42,7 +41,7 @@ class AppUtils {
 
   static Widget progressHudWidget(BuildContext context) {
     return const Center(
-      child: CircularProgressIndicator(color: AppColors.primary),
+      child: CircularProgressIndicator(color: AppStyles.primary200Color),
     );
   }
 

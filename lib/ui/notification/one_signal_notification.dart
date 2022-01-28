@@ -3,6 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/generated/l10n.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
+import 'package:flutter_boilerplate/widgets/app_button.dart';
 
 //import OneSignal
 import 'package:onesignal_flutter/onesignal_flutter.dart';
@@ -123,7 +125,6 @@ class _OneSignalExampleState extends State<OneSignalExample> {
 
   void _handleSendNotificationWithImage() async {
     var deviceState = await OneSignal.shared.getDeviceState();
-
     if (deviceState == null || deviceState.userId == null) return;
 
     var playerId = deviceState.userId!;
@@ -172,35 +173,35 @@ class _OneSignalExampleState extends State<OneSignalExample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          backgroundColor: Colors.black,
-          appBar: AppBar(
-            title: Text(S.of(context).notificationExample),
-            backgroundColor: Colors.green[800],
-          ),
-          body: Container(
-            padding: const EdgeInsets.all(10.0),
-            child: Center(
-              child: Table(
-                children: [
-                  TableRow(children: [
-                    OneSignalButton(
-                        title: S.of(context).sendNotificationWithImage,
-                        onPressed: _handleSendNotificationWithImage,
-                        enabled: !_enableConsentButton)
-                  ]),
-                  TableRow(children: [
-                    OneSignalButton(
-                        title: S.of(context).sendNotificationWithoutImage,
-                        onPressed: _handleSendNotificationWithOutImage,
-                        enabled: !_enableConsentButton)
-                  ]),
-                ],
-              ),
+        debugShowCheckedModeBanner: false,
+        home:Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text(S.of(context).notificationExample),
+          backgroundColor: AppStyles.greenColor,
+          automaticallyImplyLeading: true,
+        ),
+        body: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Center(
+            child: Table(
+              children: [
+                TableRow(children: [
+                  OneSignalButton(
+                      title: S.of(context).sendNotificationWithImage,
+                      onPressed: (){_handleSendNotificationWithImage;},
+                      enabled: !_enableConsentButton)
+                ]),
+                TableRow(children: [
+                  OneSignalButton(
+                      title: S.of(context).sendNotificationWithoutImage,
+                      onPressed: _handleSendNotificationWithOutImage,
+                      enabled: !_enableConsentButton)
+                ]),
+              ],
             ),
-          )),
-    );
+          ),
+        )));
   }
 }
 
@@ -224,9 +225,10 @@ class OneSignalButtonState extends State<OneSignalButton> {
     return Table(
       children: [
         TableRow(children: [
+
           TextButton(
             style: TextButton.styleFrom(
-                backgroundColor: Colors.green[800],
+                backgroundColor: AppStyles.greenColor,
                 primary: Colors.white,
                 textStyle: const TextStyle(
                   color: Colors.white,

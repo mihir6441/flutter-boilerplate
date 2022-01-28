@@ -1,5 +1,5 @@
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({
@@ -27,54 +27,64 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onClicked,
-      style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return AppColors.color8;
-            }
-            return textColor ?? AppColors.black;
-          },
-        ),
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.disabled)) {
-              return AppColors.color7;
-            }
-            return background;
-          },
-        ),
-        elevation: MaterialStateProperty.resolveWith<double?>(
-          (Set<MaterialState> states) {
-            return elevation ?? 4;
-          },
-        ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: endIcon != null
-            ? MainAxisAlignment.spaceBetween
-            : MainAxisAlignment.center,
-        children: [
-          if (centerText && endIcon != null) ...[
-            const Spacer(),
-            Opacity(
-              opacity: 0.0,
-              child: endIcon!,
-            ),
-          ],
-          Text(
-            text,
-            style: TextStyle(
-                fontWeight: fontWeight ?? FontWeight.bold, fontSize: fontSize),
+    return Container(
+      height: 50,
+      width: MediaQuery.of(context).size.width,
+      child: ElevatedButton(
+        onPressed: onClicked,
+        style: ButtonStyle(
+
+          foregroundColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+              if (states.contains(MaterialState.disabled)) {
+                return AppStyles.blue900Color;
+              }
+              return textColor ?? AppStyles.black;
+            },
           ),
-          if (endIcon != null) ...[
-            const Spacer(),
-            endIcon!,
+          backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+              if (states.contains(MaterialState.disabled)) {
+                return AppStyles.blue900Color;
+              }
+              return background;
+            },
+          ),
+          elevation: MaterialStateProperty.resolveWith<double?>(
+                (Set<MaterialState> states) {
+              return elevation ?? 4;
+            },
+          ),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+                side: BorderSide(color: Colors.black)),
+          ),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: endIcon != null
+              ? MainAxisAlignment.spaceBetween
+              : MainAxisAlignment.center,
+          children: [
+            if (centerText && endIcon != null) ...[
+              const Spacer(),
+              Opacity(
+                opacity: 0.0,
+                child: endIcon!,
+              ),
+            ],
+            Text(
+              text,
+              style: TextStyle(
+                  fontWeight: fontWeight ?? FontWeight.bold, fontSize: fontSize),
+            ),
+            if (endIcon != null) ...[
+              const Spacer(),
+              endIcon!,
+            ],
           ],
-        ],
+        ),
       ),
     );
   }

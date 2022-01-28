@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate/constants/app_colors.dart';
+import 'package:flutter_boilerplate/generated/l10n.dart';
 import 'package:flutter_boilerplate/model/news_api_models/Article.dart';
 import 'package:flutter_boilerplate/ui/news/bloc/news_bloc.dart';
 import 'package:flutter_boilerplate/ui/news/bloc/news_event.dart';
 import 'package:flutter_boilerplate/ui/news/bloc/news_state.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 import 'package:flutter_boilerplate/utils/app_utils.dart';
 import 'package:sizer/sizer.dart';
 
@@ -36,6 +37,11 @@ class _NewsListScreenState extends State<NewsListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(S.of(context).fetchNews),
+        backgroundColor:AppStyles.greenColor,
+        automaticallyImplyLeading: true,
+      ),
       body: BlocListener<NewsBloc, NewsState>(
         listener: (context, state) {
           if (state.isCompleted) {
@@ -53,7 +59,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
             return state.isLoading
                 ? const Center(
                     child: CircularProgressIndicator(
-                      color: AppColors.white,
+                      color: AppStyles.white,
                     ),
                   )
                 : articleList.isNotEmpty
@@ -90,10 +96,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
                                               padding: const EdgeInsets.all(5),
                                               child: Text(
                                                 articleList[index].title ?? '',
-                                                style: const TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.green),
+                                                style: AppStyles.whiteTextStyle,
                                               ),
                                             ),
                                             Padding(
@@ -102,11 +105,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
                                                 articleList[index]
                                                         .description ??
                                                     '',
-                                                style: const TextStyle(
-                                                    fontSize: 12,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                    color: AppColors.color5),
+                                                style: AppStyles.whiteTextStyle,
                                               ),
                                             )
                                           ],
@@ -129,11 +128,7 @@ class _NewsListScreenState extends State<NewsListScreen> {
                             height: 200,
                             child: Center(
                               child: Text("No Articles found!!",
-                                  style: TextStyle(
-                                    color: AppColors.white,
-                                    fontWeight: FontWeight.normal,
-                                    fontSize: 24.sp,
-                                  )),
+                                style: AppStyles.errorTextStyle,),
                             ),
                           )
                         ],
