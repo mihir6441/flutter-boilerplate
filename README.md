@@ -35,13 +35,13 @@ A Flutter base project structure using [get_it](https://pub.dev/packages/get_it)
 ## Table of contents
 1. [Dio Client](#dio-client)
 2. [Http Client](#http-client)
-3. [GraphQL](#graphql-client)
-4. [One Signal](#onesignal-sdk)
+3. [GraphQL](#graphql)
+4. [One Signal](#one-signa)
 5. [Notes](#notes)
 
 ---
 
-## Dio Client (#dio-client)
+## Dio Client
 
 For API calls the we used flutter dio package [dio](https://pub.dev/packages/dio)
 In-app added one example for getting list of news with free news API.
@@ -49,7 +49,7 @@ In-app added one example for getting list of news with free news API.
 
 ---
 
-## Http Client (#http-client)
+## Http Client
 
 API call using http package [http](https://pub.dev/packages/http)
 In app added one example for getting list of post with free post API.
@@ -58,14 +58,14 @@ In app added one example for getting list of post with free post API.
 
 ---
 
-## GraphQL(#graphql-client)
+## GraphQL
 
 API call using graphQl package [graphQl](https://pub.dev/packages/graphql_flutter)
 In app added one example for getting list of clips from our baba play project open API.
 
 ---
 
-## One Signal(#onesignal-sdk)
+## One Signal
 
 For integrating push notification we used [One Signal](https://pub.dev/packages/onesignal_flutter) plugin
 -See setup guide for integration [here](https://documentation.onesignal.com/docs/flutter-sdk-setup)
@@ -74,7 +74,7 @@ For integrating push notification we used [One Signal](https://pub.dev/packages/
 
 ---
 
-## [![Notes]](#notes)
+## Notes
 
 -After cloning project when we want to use particular one structure for API call, for that keep only those folders which required.
 For example if we want to use http method just keep `http_client.dart` file likewise for any other client.
