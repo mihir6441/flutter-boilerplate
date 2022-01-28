@@ -15,7 +15,17 @@ A Flutter base project structure using [get_it](https://pub.dev/packages/get_it)
 
 - Flutter Widgets that make it easy to implement the BLoC (Business Logic Component) design pattern. Built to be used with the bloc state management package.
 
-## Structure steps:(#structure-steps)
+## Table of contents
+1. [Structure steps](#structure-steps)
+2. [Dio Client](#dio-client)
+3. [Http Client](#http-client)
+4. [GraphQL](#graphql)
+5. [One Signal](#one-signa)
+6. [Notes](#notes)
+
+---
+
+## Structure steps
 
 - First create interactive UI for displaying data from API
 - Create bloc, event and state for that is our business logic components for API call
@@ -29,15 +39,6 @@ A Flutter base project structure using [get_it](https://pub.dev/packages/get_it)
 
 **For auto generating json serializable file run following command**
 `flutter pub run build_runner build --delete-conflicting-outputs`
-
----
-
-## Table of contents
-1. [Dio Client](#dio-client)
-2. [Http Client](#http-client)
-3. [GraphQL](#graphql)
-4. [One Signal](#one-signa)
-5. [Notes](#notes)
 
 ---
 
