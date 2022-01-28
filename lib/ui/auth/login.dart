@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate/app_screens/app_screens.dart';
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter_boilerplate/generated/l10n.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 import 'package:flutter_boilerplate/utils/app_utils.dart';
+import 'package:flutter_boilerplate/widgets/app_button.dart';
 import 'package:flutter_boilerplate/widgets/app_loading_overlay.dart';
-import 'package:sizer/sizer.dart';
 
 import 'bloc/login_bloc.dart';
 import 'bloc/login_event.dart';
@@ -63,45 +63,61 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, AppScreens.newsList);
-                        },
-                        child: Text(
-                          S.of(context).fetchNews,
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.normal,
-                          ),
+                      Text(
+                        S.of(context).apiCallWIthDio,
+                        style: AppStyles.whiteTextStyle,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: AppButton(
+                          text: S.of(context).fetchNews,
+                          background: AppStyles.white,
+                          onClicked: () {
+                            Navigator.pushNamed(context, AppScreens.newsList);
+                          },
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, AppScreens.postList);
-                        },
-                        child: Text(
-                          S.of(context).fetchPosts,
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.normal,
-                          ),
+                      Text(
+                        S.of(context).apiCallWIthHttp,
+                        style: AppStyles.whiteTextStyle,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: AppButton(
+                          text: S.of(context).fetchPosts,
+                          background: AppStyles.white,
+                          onClicked: () {
+                            Navigator.pushNamed(context, AppScreens.postList);
+                          },
                         ),
                       ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, AppScreens.clipList);
-                          // Navigator.pushNamed(context, AppScreens.notificationExample);
-                        },
-                        child: Text(
-                          S.of(context).fetchClips,
-                          //S.of(context).notificationExample,
-                          style: TextStyle(
-                            color: AppColors.white,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.normal,
-                          ),
+                      Text(
+                        S.of(context).apiCallWIthGraphQL,
+                        style: AppStyles.whiteTextStyle,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: AppButton(
+                          text: S.of(context).fetchClips,
+                          background: AppStyles.white,
+                          onClicked: () {
+                            Navigator.pushNamed(context, AppScreens.clipList);
+                          },
+                        ),
+                      ),
+                      Text(
+                        S.of(context).oneSignalPushNotification,
+                        style: AppStyles.whiteTextStyle,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: AppButton(
+                          text: S.of(context).notificationExample,
+                          background: AppStyles.white,
+                          onClicked: () {
+                            Navigator.pushNamed(
+                                context, AppScreens.notificationExample);
+                          },
                         ),
                       ),
                     ],

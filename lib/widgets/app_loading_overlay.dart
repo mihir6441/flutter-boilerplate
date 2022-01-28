@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/constants/app_colors.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 
 class AppLoadingOverlay extends StatelessWidget {
@@ -19,7 +19,7 @@ class AppLoadingOverlay extends StatelessWidget {
     return LoaderOverlay(
       useDefaultLoading: isLoading,
       child: child ?? Container(),
-      overlayColor: backgroundColor ?? AppColors.black,
+      overlayColor: backgroundColor ?? AppStyles.black,
     );
   }
 }

@@ -1,6 +1,6 @@
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter_boilerplate/constants/app_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/utils/app_styles.dart';
 
 class AppTextField extends StatefulWidget {
   const AppTextField({
@@ -86,7 +86,7 @@ class _AppTextFieldState extends State<AppTextField> {
             child: Text(
               widget.hintText,
               style: TextStyle(
-                color: widget.lightTheme ? AppColors.color9 : AppColors.color6,
+                color: widget.lightTheme ? AppStyles.primary200Color : AppStyles.blue900Color,
                 fontSize: 14,
               ),
             ),
@@ -101,40 +101,40 @@ class _AppTextFieldState extends State<AppTextField> {
           keyboardType: widget.keyboardType,
           enabled: !widget.disableEditing,
           style: TextStyle(
-            color: widget.lightTheme ? AppColors.black : AppColors.white,
+            color: widget.lightTheme ? AppStyles.black : AppStyles.white,
             fontWeight: FontWeight.bold,
             fontSize: 17,
           ),
           decoration: InputDecoration(
             contentPadding: widget.contentPadding,
-            fillColor: widget.lightTheme ? AppColors.white : null,
+            fillColor: widget.lightTheme ? AppStyles.white : null,
             floatingLabelBehavior: FloatingLabelBehavior.never,
             labelText: widget.hintText,
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(64.0),
               borderSide: BorderSide(
-                color: widget.lightTheme ? AppColors.color4 : AppColors.color5,
+                color: widget.lightTheme ? AppStyles.grey400Color : AppStyles.blue900Color,
               ),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(64.0),
               borderSide: BorderSide(
-                color: widget.lightTheme ? AppColors.color4 : AppColors.color5,
+                color: widget.lightTheme ? AppStyles.grey400Color : AppStyles.blue900Color,
               ),
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(64.0),
               borderSide: BorderSide(
-                color: widget.lightTheme ? AppColors.color4 : AppColors.color5,
+                color: widget.lightTheme ? AppStyles.grey400Color : AppStyles.blue900Color,
               ),
             ),
             labelStyle: TextStyle(
-              color: widget.lightTheme ? AppColors.black : AppColors.color4,
+              color: widget.lightTheme ? AppStyles.black : AppStyles.white,
               fontSize: 17,
               fontWeight: FontWeight.normal,
             ),
             hintStyle: TextStyle(
-              color: widget.lightTheme ? AppColors.black : AppColors.color4,
+              color: widget.lightTheme ? AppStyles.black : AppStyles.white,
               fontSize: 17,
               fontWeight: FontWeight.normal,
             ),

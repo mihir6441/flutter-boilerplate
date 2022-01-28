@@ -1,8 +1,9 @@
-import 'package:flutter_boilerplate/constants/app_colors.dart';
 import 'package:flutter_boilerplate/constants/app_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+
+import 'app_styles.dart';
 
 class ThemeUtils {
   ThemeUtils._();
@@ -19,7 +20,7 @@ class ThemeUtils {
       textButtonTheme: _textButtonTheme(theme),
       inputDecorationTheme: _inputDecorationTheme(theme),
       tabBarTheme: _tabBarTheme(theme),
-      scaffoldBackgroundColor: AppColors.black,
+      scaffoldBackgroundColor: AppStyles.black,
     );
 
     return theme;
@@ -28,27 +29,27 @@ class ThemeUtils {
   static AppBarTheme _appBarTheme(ThemeData theme) {
     return theme.appBarTheme.copyWith(
       elevation: 4.0,
-      backgroundColor: AppColors.black,
-      foregroundColor: AppColors.white,
+      backgroundColor: AppStyles.black,
+      foregroundColor: AppStyles.white,
       titleSpacing: 0,
       centerTitle: true,
       shadowColor: Colors.black26,
       textTheme: theme.textTheme.copyWith(
         headline6: theme.textTheme.headline6!.copyWith(
-          color: AppColors.black,
+          color: AppStyles.black,
           fontWeight: FontWeight.bold,
           fontSize: 18.sp,
         ),
       ),
-      iconTheme: const IconThemeData(color: AppColors.white),
+      iconTheme: const IconThemeData(color: AppStyles.white),
     );
   }
 
   static ElevatedButtonThemeData _elevatedButtonTheme(ThemeData theme) {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          onPrimary: AppColors.black,
-          primary: AppColors.color1,
+          onPrimary: AppStyles.black,
+          primary: AppStyles.primary200Color,
           textStyle: const TextStyle(
               fontSize: AppConstants.defaultButtonTextSizePhone,
               fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class ThemeUtils {
   static OutlinedButtonThemeData _outlinedButtonTheme(ThemeData theme) {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        primary: AppColors.primary,
+        primary: AppStyles.primary900Color,
         textStyle: const TextStyle(
             fontSize: AppConstants.defaultButtonTextSizePhone,
             fontWeight: FontWeight.bold,
@@ -76,7 +77,7 @@ class ThemeUtils {
   static TextButtonThemeData _textButtonTheme(ThemeData theme) {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
-        primary: AppColors.color3,
+        primary: AppStyles.primary200Color,
         textStyle: const TextStyle(
             fontSize: AppConstants.defaultButtonTextSizePhone,
             fontWeight: FontWeight.bold,
@@ -93,7 +94,7 @@ class ThemeUtils {
         vertical: AppConstants.defaultButtonPadding,
         horizontal: AppConstants.defaultButtonPadding,
       ),
-      fillColor: AppColors.color5,
+      fillColor: AppStyles.primary200Color,
       filled: true,
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(64.0),
@@ -102,12 +103,12 @@ class ThemeUtils {
         borderRadius: BorderRadius.circular(64.0),
       ),
       labelStyle: TextStyle(
-        color: AppColors.color4,
+        color: AppStyles.black,
         fontSize: 8.sp,
         fontWeight: FontWeight.normal,
       ),
       hintStyle: TextStyle(
-        color: AppColors.color4,
+        color: AppStyles.black,
         fontSize: 8.sp,
         fontWeight: FontWeight.normal,
       ),
@@ -120,11 +121,11 @@ class ThemeUtils {
       indicator: const UnderlineTabIndicator(
         borderSide: BorderSide(
           width: 2,
-          color: AppColors.color1,
+          color: AppStyles.black,
         ),
       ),
-      labelColor: AppColors.black,
-      unselectedLabelColor: AppColors.black,
+      labelColor: AppStyles.black,
+      unselectedLabelColor: AppStyles.black,
       labelStyle: TextStyle(
         fontSize: 24.sp,
         fontWeight: FontWeight.bold,
