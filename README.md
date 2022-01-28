@@ -74,7 +74,7 @@ For integrating push notification we used [One Signal](https://pub.dev/packages/
 
 ---
 
-## Notes(#notes)
+## Notes[![]](#notes)
 
 -After cloning project when we want to use particular one structure for API call, for that keep only those folders which required.
 For example if we want to use http method just keep `http_client.dart` file likewise for any other client.
