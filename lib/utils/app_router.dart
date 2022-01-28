@@ -38,6 +38,11 @@ class AppRouter {
           settings,
           ClipsListScreen.create(),);
 
+      case AppScreens.clipList:
+        return _buildRoute(
+          settings,
+          ClipsListScreen.create());
+
       case AppScreens.notificationExample:
         return _buildRoute(
           settings,
