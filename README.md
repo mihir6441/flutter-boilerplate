@@ -20,7 +20,7 @@ A Flutter base project structure using [get_it](https://pub.dev/packages/get_it)
 2. [Dio Client](#dio-client)
 3. [Http Client](#http-client)
 4. [GraphQL](#graphql)
-5. [One Signal](#one-signa)
+5. [One Signal](#one-signal)
 6. [Notes](#notes)
 
 ---
